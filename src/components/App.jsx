@@ -37,7 +37,7 @@ class App extends Component {
   handleDeleteContact = (contactId) => {
     const updatedContacts = this.state.contacts.filter(contact => contact.id !== contactId);
     this.setState({ contacts: updatedContacts });
-   
+    localStorage.setItem('contacts', JSON.stringify(updatedContacts));
   }
   
   
